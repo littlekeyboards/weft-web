@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weft — Your Wardrobe, Elevated</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #1a1a1a;
+      background: #fff;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    /* Nav */
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 28px 24px;
+    }
+
+    .wordmark {
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: #1a1a1a;
+      text-decoration: none;
+    }
+
+    nav a.nav-link {
+      font-size: 14px;
+      color: #555;
+      text-decoration: none;
+    }
+
+    nav a.nav-link:hover {
+      color: #1a1a1a;
+    }
+
+    /* Hero */
+    .hero {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 72px 24px 80px;
+    }
+
+    .hero h1 {
+      font-size: clamp(36px, 7vw, 56px);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -1px;
+      margin: 0 0 20px;
+      color: #1a1a1a;
+    }
+
+    .hero p.subtitle {
+      font-size: 18px;
+      color: #444;
+      max-width: 480px;
+      margin: 0 0 36px;
+      line-height: 1.65;
+    }
+
+    .app-store-badge {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 500;
+      color: #888;
+      background: #f3f3f3;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 10px 18px;
+      cursor: default;
+      letter-spacing: 0.1px;
+    }
+
+    /* Features */
+    .features {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 16px 24px 96px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 40px 48px;
+    }
+
+    .feature h2 {
+      font-size: 16px;
+      font-weight: 650;
+      margin: 0 0 8px;
+      color: #1a1a1a;
+      letter-spacing: -0.1px;
+    }
+
+    .feature p {
+      font-size: 15px;
+      color: #555;
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid #eee;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 28px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 13px;
+      color: #888;
+    }
+
+    footer a {
+      color: #888;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: #1a1a1a;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 { letter-spacing: -0.5px; }
+      footer { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="wordmark" href="/">Weft</a>
+    <a class="nav-link" href="/support.html">Support</a>
+  </nav>
+
+  <section class="hero">
+    <h1>Your wardrobe,<br>elevated.</h1>
+    <p class="subtitle">Weft helps you build a wardrobe that actually works — cataloguing what you own, surfacing outfit ideas, and helping you shop smarter.</p>
+    <span class="app-store-badge">Coming to the App Store</span>
+  </section>
+
+  <section class="features">
+    <div class="feature">
+      <h2>Wardrobe</h2>
+      <p>Photograph and catalogue every item you own. Track colors, fits, brands, and condition — all in one place.</p>
+    </div>
+    <div class="feature">
+      <h2>Style Guide</h2>
+      <p>Pick an item and get outfit ideas built around it, tailored to your style and what you already own.</p>
+    </div>
+    <div class="feature">
+      <h2>Fit Check</h2>
+      <p>Upload a photo of your outfit and get an honest, constructive critique from overall impression to specific styling notes.</p>
+    </div>
+    <div class="feature">
+      <h2>Scout</h2>
+      <p>Photograph something you are considering buying. Find out whether it fits your wardrobe before you commit.</p>
+    </div>
+  </section>
+
+  <footer>
+    <span>&copy; Switch Development, LLC</span>
+    <div class="footer-links">
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms.html">Terms</a>
+      <a href="/support.html">Support</a>
+    </div>
+  </footer>
+
+</body>
+</html>
