@@ -5,141 +5,150 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Weft — Your Wardrobe, Elevated</title>
   <style>
-    *, *::before, *::after { box-sizing: border-box; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      margin: 0;
-      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", sans-serif;
       color: #1a1a1a;
-      background: #fff;
+      background: #faf9f7;
       font-size: 16px;
       line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
 
-    /* Nav */
+    a { color: inherit; text-decoration: none; }
+
+    /* — Nav — */
     nav {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      max-width: 760px;
+      max-width: 800px;
       margin: 0 auto;
-      padding: 28px 24px;
+      padding: 36px 24px;
     }
 
     .wordmark {
-      font-size: 20px;
-      font-weight: 700;
-      letter-spacing: -0.5px;
-      color: #1a1a1a;
-      text-decoration: none;
-    }
-
-    nav a.nav-link {
-      font-size: 14px;
-      color: #555;
-      text-decoration: none;
-    }
-
-    nav a.nav-link:hover {
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
       color: #1a1a1a;
     }
 
-    /* Hero */
+    .nav-links { display: flex; gap: 24px; }
+
+    .nav-links a {
+      font-size: 13px;
+      color: #999;
+      letter-spacing: 0.2px;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: #1a1a1a; }
+
+    /* — Hero — */
     .hero {
-      max-width: 760px;
+      max-width: 800px;
       margin: 0 auto;
-      padding: 72px 24px 80px;
+      padding: 72px 24px 104px;
     }
 
     .hero h1 {
-      font-size: clamp(36px, 7vw, 56px);
+      font-size: clamp(44px, 9vw, 72px);
       font-weight: 700;
-      line-height: 1.15;
-      letter-spacing: -1px;
-      margin: 0 0 20px;
-      color: #1a1a1a;
+      line-height: 1.05;
+      letter-spacing: -2.5px;
+      margin-bottom: 28px;
+      max-width: 600px;
     }
 
-    .hero p.subtitle {
-      font-size: 18px;
-      color: #444;
-      max-width: 480px;
-      margin: 0 0 36px;
-      line-height: 1.65;
+    .hero .subtitle {
+      font-size: 17px;
+      color: #777;
+      max-width: 420px;
+      line-height: 1.7;
+      margin-bottom: 44px;
     }
 
-    .app-store-badge {
+    .badge {
       display: inline-block;
-      font-size: 13px;
+      font-size: 11px;
       font-weight: 500;
-      color: #888;
-      background: #f3f3f3;
-      border: 1px solid #e0e0e0;
-      border-radius: 8px;
-      padding: 10px 18px;
-      cursor: default;
-      letter-spacing: 0.1px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #999;
+      border: 1px solid #dcd9d4;
+      border-radius: 100px;
+      padding: 10px 24px;
     }
 
-    /* Features */
-    .features {
-      max-width: 760px;
+    /* — Features — */
+    .features-section {
+      max-width: 800px;
       margin: 0 auto;
-      padding: 16px 24px 96px;
+      padding: 0 24px 120px;
+    }
+
+    .section-label {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #bbb;
+      margin-bottom: 48px;
+    }
+
+    .features {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 40px 48px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 48px 56px;
     }
 
     .feature h2 {
       font-size: 16px;
-      font-weight: 650;
-      margin: 0 0 8px;
-      color: #1a1a1a;
-      letter-spacing: -0.1px;
+      font-weight: 600;
+      letter-spacing: -0.3px;
+      margin-bottom: 10px;
     }
 
     .feature p {
       font-size: 15px;
-      color: #555;
-      margin: 0;
-      line-height: 1.6;
+      color: #888;
+      line-height: 1.65;
     }
 
-    /* Footer */
+    /* — Footer — */
     footer {
-      border-top: 1px solid #eee;
-      max-width: 760px;
+      max-width: 800px;
       margin: 0 auto;
-      padding: 28px 24px;
+      padding: 28px 24px 48px;
+      border-top: 1px solid #e5e3df;
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
       flex-wrap: wrap;
       gap: 12px;
-      font-size: 13px;
-      color: #888;
+      font-size: 12px;
+      color: #bbb;
+      letter-spacing: 0.2px;
     }
 
     footer a {
-      color: #888;
-      text-decoration: none;
+      color: #bbb;
+      transition: color 0.2s;
     }
 
-    footer a:hover {
-      color: #1a1a1a;
-    }
+    footer a:hover { color: #1a1a1a; }
 
-    .footer-links {
-      display: flex;
-      gap: 20px;
-      align-items: center;
-    }
+    .footer-links { display: flex; gap: 20px; }
 
-    @media (max-width: 480px) {
-      .hero h1 { letter-spacing: -0.5px; }
-      footer { flex-direction: column; align-items: flex-start; }
+    /* — Responsive — */
+    @media (max-width: 600px) {
+      .hero h1 { letter-spacing: -1.5px; }
+      .features { grid-template-columns: 1fr; gap: 40px; }
+      footer { flex-direction: column; align-items: flex-start; gap: 16px; }
     }
   </style>
 </head>
@@ -147,31 +156,36 @@
 
   <nav>
     <a class="wordmark" href="/">Weft</a>
-    <a class="nav-link" href="/support.html">Support</a>
+    <div class="nav-links">
+      <a href="/support.html">Support</a>
+    </div>
   </nav>
 
   <section class="hero">
-    <h1>Your wardrobe,<br>elevated.</h1>
-    <p class="subtitle">Weft helps you build a wardrobe that actually works — cataloguing what you own, surfacing outfit ideas, and helping you shop smarter.</p>
-    <span class="app-store-badge">Coming to the App Store</span>
+    <h1>Your wardrobe, elevated.</h1>
+    <p class="subtitle">Weft helps you build a wardrobe that actually works&mdash;cataloguing what you own, surfacing outfit ideas, and helping you shop smarter.</p>
+    <span class="badge">Coming to the App Store</span>
   </section>
 
-  <section class="features">
-    <div class="feature">
-      <h2>Wardrobe</h2>
-      <p>Photograph and catalogue every item you own. Track colors, fits, brands, and condition — all in one place.</p>
-    </div>
-    <div class="feature">
-      <h2>Style Guide</h2>
-      <p>Pick an item and get outfit ideas built around it, tailored to your style and what you already own.</p>
-    </div>
-    <div class="feature">
-      <h2>Fit Check</h2>
-      <p>Upload a photo of your outfit and get an honest, constructive critique from overall impression to specific styling notes.</p>
-    </div>
-    <div class="feature">
-      <h2>Scout</h2>
-      <p>Photograph something you are considering buying. Find out whether it fits your wardrobe before you commit.</p>
+  <section class="features-section">
+    <p class="section-label">What Weft does</p>
+    <div class="features">
+      <div class="feature">
+        <h2>Wardrobe</h2>
+        <p>Photograph and catalogue every item you own. Track colors, fits, brands, and condition&mdash;all in one place.</p>
+      </div>
+      <div class="feature">
+        <h2>Style Guide</h2>
+        <p>Pick an item and get outfit ideas built around it, tailored to your style and what you already own.</p>
+      </div>
+      <div class="feature">
+        <h2>Fit Check</h2>
+        <p>Upload a photo of your outfit and get an honest, constructive critique&mdash;from overall impression to specific styling notes.</p>
+      </div>
+      <div class="feature">
+        <h2>Scout</h2>
+        <p>Photograph something you're considering buying. Find out whether it fits your wardrobe before you commit.</p>
+      </div>
     </div>
   </section>
 
